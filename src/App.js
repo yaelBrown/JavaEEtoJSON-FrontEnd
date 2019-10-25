@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Messages from './Messages';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello</h1>
+      <form>
+        <div className="form-left">
+          <label htmlFor="author">Author</label>
+          <br></br>
+          <label htmlFor="message">Message</label>
+        </div>
+        <div className="form-right">
+          <input type="text" name="author" id="author"/>
+          <br></br>
+          <input type="text" name="message" id="message"/>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <hr></hr>
+      <Messages/>
     </div>
   );
 }
